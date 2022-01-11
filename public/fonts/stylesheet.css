@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Braveheart';
+    src: url('Braveheart.woff2') format('woff2'),
+        url('Braveheart.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
