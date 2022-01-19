@@ -36,7 +36,7 @@ export default function UserForm({
     }
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     let totalPrice = prices.reduce(reducer);
-    order.totalPrice = totalPrice;
+    order.totalPrice = Math.round(totalPrice, 2);
     order.finalPrice = validCoupon.value
       ? ((totalPrice * (100 - validCoupon.value)) / 100 + shippingFees).toFixed(
           2

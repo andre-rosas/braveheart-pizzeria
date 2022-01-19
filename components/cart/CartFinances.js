@@ -20,7 +20,7 @@ export default function cartFinances({
       prices.push(cartOrders[order].price * cartOrders[order].quantity);
     }
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    let totalPrice = prices.reduce(reducer);
+    let totalPrice = Math.round(prices.reduce(reducer), 2);
     setCartTotal(totalPrice);
   }, [cartOrders]);
 

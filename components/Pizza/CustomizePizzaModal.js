@@ -85,7 +85,7 @@ export default function CustomizePizzaModal({ pizza, setCustomizeModal }) {
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     let totalPrice = changedIngsPrices.reduce(reducer, 0);
     setPizzaPrice((pizza.price + totalPrice) * pizzaQuantity);
-    newPizza.price = totalPrice;
+    newPizza.price = Math.round(totalPrice, 2);
     setCustomPizza(newPizza);
   };
 
@@ -202,7 +202,7 @@ export default function CustomizePizzaModal({ pizza, setCustomizeModal }) {
                   </ul>
                   <input
                     type="submit"
-                    value="Finish your editing"
+                    value="Finish your customization"
                     className="rounded-md cursor-pointer w-full mx-auto my-3 shadow-md bg-red-600 text-white font-bold px-5 py-3 text-lg outline-none border-2 border-red-600 hover:bg-white  hover:text-red-600 hover:border-2 hover:border-red-600 focus:outline-none"
                   />
                   <p classname="text-xs text-left text-red-700">
