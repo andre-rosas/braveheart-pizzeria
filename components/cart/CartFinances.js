@@ -20,7 +20,7 @@ export default function cartFinances({
       prices.push(cartOrders[order].price * cartOrders[order].quantity);
     }
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
-    let totalPrice = Math.round(prices.reduce(reducer), 2);
+    let totalPrice = prices.reduce(reducer);
     setCartTotal(totalPrice);
   }, [cartOrders]);
 
@@ -58,7 +58,7 @@ export default function cartFinances({
         </div>
         <div className="flex justify-between px-3 my-2">
           <div className="font-semibold text-lg text-scotland-blue">Total</div>
-          <div className="font-bold text-lg">{cartTotal} £</div>
+          <div className="font-bold text-lg">{cartTotal.toFixed(2)} £</div>
         </div>
         <div className="flex justify-between px-3 my-2">
           <div className="font-semibold text-lg text-scotland-blue">

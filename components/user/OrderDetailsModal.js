@@ -132,7 +132,7 @@ export default function OrderDetailsModal({ order, setOrderDetailsModal }) {
                       Total Price
                     </div>
                     <div className="font-bold sm:text-sm av:text-lg lg:text-sm xl:text-xl">
-                      £ {Math.round(order.totalPrice, 2)}
+                      £ {order.totalPrice.toFixed(2)}
                     </div>
                   </div>
                   <div className="flex justify-between px-3 sm:py-0 my-2">

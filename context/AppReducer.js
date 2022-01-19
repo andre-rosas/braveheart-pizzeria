@@ -36,7 +36,6 @@ export const AppReducer = (state, action) => {
       };
     }
     case ACTION_TYPES.REMOVE_CART: {
-      console.log(action.payload);
       let oldCart = [...state.cartOrders];
       let newCart = oldCart.filter((pizza) => {
         return pizza.id !== action.payload.id;

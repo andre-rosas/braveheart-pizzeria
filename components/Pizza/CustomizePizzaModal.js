@@ -81,22 +81,19 @@ export default function CustomizePizzaModal({ pizza, setCustomizeModal }) {
       return ing.price;
     });
 
-    console.log(changedIngsPrices);
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     let totalPrice = changedIngsPrices.reduce(reducer, 0);
-    setPizzaPrice((pizza.price + totalPrice) * pizzaQuantity);
-    newPizza.price = Math.round(totalPrice, 2);
+    setPizzaPrice(((pizza.price + totalPrice) * pizzaQuantity).toFixed(2));
+    newPizza.price = totalPrice.toFixed(2);
     setCustomPizza(newPizza);
   };
 
   const quantityChangeHandler = (e) => {
-    console.log(e.target.value);
     let newQuantity = parseInt(e.target.value);
     let price = pizzaPrice / pizzaQuantity;
     setPizzaQuantity(newQuantity);
     setErrorMessage(undefined);
     let newPrice = price * newQuantity;
-    console.log(newPrice);
     setPizzaPrice(newPrice);
   };
 

@@ -86,7 +86,7 @@ export default function CartPizzaCard({ pizza }) {
           </ul>
           <div className="grid grid-cols-2 gap-4 my-3">
             <div className="font-normal text-2xl text-scotland-blue px-3">
-              £ {pizza.price * pizza.quantity}
+              £ {(pizza.price * pizza.quantity).toFixed(2)}
             </div>
             <i>
               <button
