@@ -28,7 +28,7 @@ export default function UserForm({
   const userDataHandler = (data, e) => {
     e.target.reset();
     let order = {};
-    let shippingFees = 30;
+    let shippingFees = 5;
     order.orders = [...cartOrders];
     let prices = [];
     for (let order in cartOrders) {

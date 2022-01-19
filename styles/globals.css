@@ -1,6 +1,6 @@
 @import url("../public/fonts/stylesheet.css");
-@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap")
-  @tailwind base;
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 @layer base {
@@ -22,7 +22,7 @@ a {
 
 .top-section {
   background-image: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
-    url("https://mocah.org/uploads/posts/4589507-food-pizza-cheese.jpg");
+    url("https://i.imgur.com/qNUFpWI.jpg");
   background-size: cover;
   background-position: center;
   height: 70vh;
