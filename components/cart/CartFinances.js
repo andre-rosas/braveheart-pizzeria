@@ -82,7 +82,10 @@ export default function cartFinances({
             )}
           </div>
           <div className="font-bold text-right text-lg">
-            {couponEntry ? (cartTotal * couponEntry.value) / 100 : 0} £{" "}
+            {couponEntry
+              ? ((cartTotal * couponEntry.value) / 100).toFixed(2)
+              : 0}{" "}
+            £{" "}
             {couponEntry &&
               `(
            ${couponEntry.value}%)`}
