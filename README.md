@@ -5,15 +5,13 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, make sure you use nvm 14 or 16:
 
 ```bash
-nvm use 14
-# or
-nvm use 16
+nvm use 22.12 or higher
 ```
 
 First, run the development server:
 
 ```bash
-npm run dev
+npx run dev
 # or
 yarn dev
 ```
