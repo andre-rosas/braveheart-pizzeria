@@ -8,7 +8,7 @@ const Header = () => {
       <header className="relative mt-3 border-t-0 border-b-2 border-l-0 border-r-0 border-solid border-gray-400 shadow p-1">
         <style jsx>
           {`
-            @import url("../public/fonts/stylesheets.css");
+            @import url("../public/fonts/stylesheet.css");
 
             .logo-brand {
               font-family: "Braveheart", serif;

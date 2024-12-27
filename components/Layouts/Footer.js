@@ -6,7 +6,7 @@ function Footer() {
     <footer className="mt-5 relative bottom--100">
       <style jsx>
         {`
-          @import url("../public/fonts/stylesheets.css");
+          @import url("../public/fonts/stylesheet.css");
 
           .logo-brand {
             font-family: "Braveheart", serif;

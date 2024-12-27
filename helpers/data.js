@@ -706,19 +706,5 @@ export const menu = [
     ingDescription: "Volume: 33 cL",
   },
 ];
-//   push data to the db
-export const pushDataHandler = () => {
-  console.log(menu);
-  for (let item in menu) {
-    axios
-      .post(
-        `https://braveheart-pizzeria-default-rtdb.firebaseio.com/.json/`,
-        menu[item]
-      )
-      .then((res) => {
-        console.log(res);
-      });
-  }
-};
 
 // This data is based on https://sarhan-food-menu.firebaseio.com/pizza-menu.json

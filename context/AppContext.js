@@ -38,7 +38,8 @@ const AppContextProvider = (props) => {
 
   useEffect(() => {
     axios
-      .get("https://braveheart-pizzeria-default-rtdb.firebaseio.com/.json")
+      // .get("https://braveheart-pizzeria-default-rtdb.firebaseio.com/.json")
+      .get("/pizzeria-menu.json")
       .then((res) => {
         console.log(Object.values(res.data));
         let menuProducts = [...Object.values(res.data)];
