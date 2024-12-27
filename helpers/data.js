@@ -707,18 +707,30 @@ export const menu = [
   },
 ];
 //   push data to the db
-export const pushDataHandler = () => {
-  console.log(menu);
-  for (let item in menu) {
-    axios
-      .post(
-        `https://braveheart-pizzeria-default-rtdb.firebaseio.com/.json/`,
-        menu[item]
-      )
-      .then((res) => {
-        console.log(res);
-      });
-  }
-};
+// export const pushDataHandler = () => {
+//   console.log(menu);
+//   for (let item in menu) {
+//     axios
+//       .post(
+//         `https://braveheart-pizzeria-default-rtdb.firebaseio.com/.json/`,
+//         menu[item]
+//       )
+//       .then((res) => {
+//         console.log(res);
+//       });
+//   }
+// };
 
+export const pushDataHandler = () => {
+  fetch('./pizzeria-menu.json')
+    .then((response) => response.json())
+    .then((menu) => {
+      for (let item of menu) {
+        axios
+          .post('https://mockapi.io/api/v1/pizzeria-menu', item)
+          .then((res) => console.log('Data posted:', res))
+          .catch((error) => console.error('Error posting data:', error));
+      }
+    });
+};
 // This data is based on https://sarhan-food-menu.firebaseio.com/pizza-menu.json
