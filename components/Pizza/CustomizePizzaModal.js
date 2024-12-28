@@ -227,7 +227,7 @@ export default function CustomizePizzaModal({ pizza, setCustomizeModal }) {
                   )}
                 </div>
                 <h3 className="pt-5 pb-2 text-center text-3xl text-scotland-blue font-bold">
-                  {pizzaPrice.toFixed(2)} £
+                  {Math.round(pizzaPrice, 2)} £
                 </h3>
                 <button
                   className="px-3 py-2 mb-2 text-center text-base bg-scotland-blue text-white font-bold w-full mx-auto border border-scotland-blue hover:bg-white hover:text-scotland-blue hover:border-2 hover:border-scotland-blue"
